@@ -1,0 +1,31 @@
+{
+  "name": "rwpaddseason",
+  "version": "1.0.0",
+  "description": "Lamdba Function to add RWP Season to DynamoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha ./spec/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianfmc/RWPAddSeason.git"
+  },
+  "keywords": [
+    "RWP",
+    "DynamoDB",
+    "Add",
+    "Season"
+  ],
+  "author": "Ian F. McCallum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ianfmc/RWPAddSeason/issues"
+  },
+  "homepage": "https://github.com/ianfmc/RWPAddSeason#readme",
+  "devDependencies": {
+    "aws-sdk": "^2.6.11",
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2",
+    "sinon": "^1.17.6"
+  }
+}
