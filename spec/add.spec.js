@@ -1,3 +1,4 @@
+var AWSMock = require('aws-sdk-mock');
 var AWS = require('aws-sdk');
 
 var app = require('../index.js');
@@ -9,18 +10,14 @@ var assert = chai.assert;
 
 describe('Add a New Season', function() { 
 
-	var database;
-
 	var seasonCorrect;
 	var seasonNoStart;
 	var seasonNoEnd;
 
 	before(function(){
-		database = new AWS.DynamoDB.DocumentClient();
-		mock = sinon.mock(database);
-		mock.expects("get").withArgs(seasonCorrect).returns("OK");
-		mock.expects("get").withArgs(seasonNoStart).returns(new(Error));
-		mock.expects("get").withArgs(seasonNoEnd).returns(new(Error));
+		AWSMock.mock('DynamoDB.DocumentClient', 'put', function(params, callback) {
+				callback();
+			});
 	});
 
 	beforeEach(function() {
