@@ -22,17 +22,17 @@ describe('Add a New Season', function() {
 
 	beforeEach(function() {
 		seasonCorrect = {
-		    "Name" : "2016 CIF Boys",
-		    "StartDate" : "20160830",
-		    "EndDate" : "20161115"
+		    "name" : "2016 CIF Boys",
+		    "startDate" : "20160830",
+		    "endDate" : "20161115"
 			};
 		seasonNoStart = {
-		    "Name" : "2016 CIF Boys",
-		    "EndDate" : "20161115"
+		    "name" : "2016 CIF Boys",
+		    "endDate" : "20161115"
 			};
 		seasonNoEnd = {
-		    "Name" : "2016 CIF Boys",
-		    "StartDate" : "20160830"
+		    "name" : "2016 CIF Boys",
+		    "startDate" : "20160830"
 			};
 	});
 
