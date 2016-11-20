@@ -15,7 +15,7 @@ exports.handler = function(event, context, callback) {
         var params = {
             TableName : 'Season',
             Item : { 
-                "seasonID" : uuid,
+                "seasonID" : uuid.toString(),
                 "name" : event.name ,
                 "startDate" : event.startDate,
                 "endDate" : event.endDate
