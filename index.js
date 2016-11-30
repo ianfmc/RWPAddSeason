@@ -21,7 +21,11 @@ exports.handler = function(event, context, callback) {
                 "endDate" : event.endDate
             },
         };
-        docClient.put(params, function(response, result) { 
-            callback(null, 'Season : ' + uuid.toString()) });
+        docClient.put(params, function(err, result) {
+            if (err)
+                callback(new Error('DynamoDB Error'));
+            else
+                callback(null, 'seasonID: ' + uuid.toString()) 
+        });
     }
 };
