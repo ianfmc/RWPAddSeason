@@ -25,7 +25,7 @@ exports.handler = function(event, context, callback) {
             if (err)
                 callback(new Error('DynamoDB Error'));
             else
-                callback(null, 'seasonID: ' + uuid.toString()) 
+                callback(null, JSON.stringify('seasonID: ' + uuid.toString()));
         });
     }
 };
