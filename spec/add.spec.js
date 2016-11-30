@@ -43,7 +43,7 @@ describe('Add a New Season', function() {
 
 		app.handler(seasonCorrect, context, function (err, data) {
 			expect(err).equal(null);
-			expect(data).to.contain('Season');
+			expect(data).to.contain('seasonID');
 
 			done();
 		});
